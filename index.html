@@ -4,9 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAG Lab — интерактивный тренажёр: чанки, top-k, TF-IDF</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.17"></script>
+    <style>
+
+html,
+body {
+  background: #020617;
+}
+
+@keyframes rag-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rag-pop {
+  animation: rag-pop 0.35s ease-out both;
+}
+
+input[type="range"] {
+  accent-color: #34d399;
+}
+
+mark.rag-hit {
+  background: rgba(250, 204, 21, 0.25);
+  color: #fde68a;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+    </style>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
